@@ -7,7 +7,7 @@ export default function Hero(){
         <p style={{marginBottom: "1em"}} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis finibus orci, non auctor est. Nullam sollicitudin nec turpis sit amet vehicula. Sed vitae felis eget odio egestas ullamcorper ac nec neque. Curabitur scelerisque, lacus id placerat placerat, arcu lorem condimentum nunc, non commodo libero sapien vitae urna. </p>
         <div><a className="button-outline " href="/">Try for free</a></div>
         </div>
-        <div className="relative hidden xl:block" style={{height: "80vh", objectFit: "contain"}}><Image src="/static/images/hero.jpeg" fill={true} /></div>
+        <div className="relative hidden xl:block" style={{height: "80vh", objectFit: "contain"}}><Image src="/static/images/hero.jpeg" fill={true} alt="Hello"/></div>
         </div>
     </div>
 }
