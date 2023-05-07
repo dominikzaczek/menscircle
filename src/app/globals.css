@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Proxima";
+  src: url(/static/fonts/proxima-regular.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Proxima";
+  src: url(/static/fonts/proxima-medium.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Proxima";
+  src: url(/static/fonts/proxima-bold.otf);
+  font-weight: bold;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -13,15 +31,85 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --primary-color: #081d18;
+    --color-snow: #FBF5F3;
+    --color-orange: #E28413;
+    --color-salmon: #DE3C4B;
+    --color-ruby: #C42847;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Proxima";
+  background-color: var(--primary-color);
+  color: var(--color-snow);
+}
+
+h1{
+  color: var(--color-orange);
+  font-size: 5.75rem;
+  word-spacing: normal;
+  line-height: 0.9;
+  font-family: "Proxima";
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+h2{
+  color: var(--color-snow);
+  font-size: 3.45rem;
+  word-spacing: normal;
+  line-height: 0.9;
+  font-family: "Proxima";
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+
+
+a.button-outline{
+  font-family: "Proxima";
+  font-size: 1.4em;
+  border: 1px solid white;
+  font-weight: 400;
+  padding: 0.5rem;
+  transition: all 0.3s;
+}
+
+a.button-outline:hover{
+  background-color: var(--color-ruby);
+}
+
+a.button-outline-inverted{
+  font-family: "Proxima";
+  font-size: 1.4em;
+  border: 1px solid var(--primary-color);
+  font-weight: 400;
+  padding: 0.5rem;
+  transition: all 0.3s;
+  color: var(--primary-color)
+}
+
+a.button-outline-inverted:hover{
+  background-color: var(--color-ruby);
+  color: var(--color-snow);
+  border: var(--color-snow);
+  cursor: pointer;
+}
+
+/* Backgrounds */
+.bg-snow{
+  background-color: var(--color-snow);
+}
+
+.bg-primary{
+  background-color: var(--primary-color);
+}
+
+.bg-orange{
+  background-color: var(--color-orange);
+}
+
+.bg-ruby{
+  background-color: var(--color-ruby);
 }
