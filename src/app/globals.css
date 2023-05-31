@@ -31,23 +31,25 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --primary-color: #081d18;
+    --primary-color: #0E2A30;
     --color-snow: #FBF5F3;
-    --color-orange: #E28413;
-    --color-salmon: #DE3C4B;
+    --color-lightblue: #9CAFB7;
+    --color-blue: #4281A4;
+    --color-orange: #F9C784;
+    --color-salmon: #FD9772;
     --color-ruby: #C42847;
   }
 }
 
 body {
   font-family: "Proxima";
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   color: var(--color-snow);
 }
 
 h1{
   color: var(--color-orange);
-  font-size: 5.75rem;
+  font-size: 4.70rem;
   word-spacing: normal;
   line-height: 0.9;
   font-family: "Proxima";
@@ -56,16 +58,31 @@ h1{
 }
 
 h2{
-  color: var(--color-snow);
+  color: var(--primary-color);
   font-size: 3.45rem;
   word-spacing: normal;
   line-height: 0.9;
   font-family: "Proxima";
   font-weight: bold;
   margin-bottom: 0.5em;
+  text-transform: uppercase;
 }
 
+h2 span.highlighted{
+  background: var(--primary-color);
+  color: white;
+  padding: 0 10px;
+}
 
+h3{
+  color: white;
+  font-size: 1.73rem;
+  word-spacing: normal;
+  line-height: 0.9;
+  font-family: "Proxima";
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
 
 a.button-outline{
   font-family: "Proxima";
@@ -112,4 +129,16 @@ a.button-outline-inverted:hover{
 
 .bg-ruby{
   background-color: var(--color-ruby);
+}
+
+.highlighted {
+  background: var(--primary-color);
+  color: white;
+  padding: 0 5px;
+}
+
+.highlighted-primary {
+  background: white;
+  color: var(--primary-color);
+  padding: 0 5px;
 }

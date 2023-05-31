@@ -1,13 +1,13 @@
 import Image from "next/image";
-
+import styles from './Hero.module.scss';
 export default function Hero(){
-    return <div className="h-screen flex items-center">
-        <div className="container mx-auto grid grid-cols-1 xl:grid-cols-2 xl:gap-x-9">
-        <div className="flex justify-center flex-col p-5 w-100 xl:w-3/4"><h1>We are men. Lipsum.</h1>
-        <p style={{marginBottom: "1em"}} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis finibus orci, non auctor est. Nullam sollicitudin nec turpis sit amet vehicula. Sed vitae felis eget odio egestas ullamcorper ac nec neque. Curabitur scelerisque, lacus id placerat placerat, arcu lorem condimentum nunc, non commodo libero sapien vitae urna. </p>
-        <div><a className="button-outline " href="/">Try for free</a></div>
-        </div>
-        <div className="relative hidden xl:block" style={{height: "80vh", objectFit: "contain"}}><Image src="/static/images/hero.jpeg" fill={true} alt="Hello"/></div>
+    return <div className={"h-screen flex items-center justify-center bgim"} style={{background: 'url(/static/images/trees.jpg)'}}>
+        <div className="container flex flex-col items-center">
+                <div className="w-50 h-50 relative" style={{width: '10em', height: '10em'}}>
+                    <Image src="/static/images/logo_white_png.png" alt="Men's Circle Logo" fill style={{objectFit: "contain"}}/>
+                </div>
+                <h1 className="text-white">The Men&apos;s Self-Development Club</h1>
+                <h3>Men challenging men to be better</h3>
         </div>
     </div>
 }
